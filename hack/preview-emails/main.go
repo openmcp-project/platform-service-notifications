@@ -43,9 +43,9 @@ func main() {
 				ResourceDisplayName: "my-cp",
 				Role:                "admin",
 				Actor:               "max.mustermann@example.com",
-				ConsoleURL:    "https://app.open-control-plane.io/controlplanes/poc--ws-dev--my-cp",
-				ConnectURL:    "https://cloud-orchestration.github.tools.sap/docs/how-to/connect-kubectl",
-				SupportURL:    "https://github.com/open-control-plane/support/issues",
+				ConsoleURL:          "https://app.open-control-plane.io/controlplanes/poc--ws-dev--my-cp",
+				ConnectURL:          "https://cloud-orchestration.github.tools.sap/docs/how-to/connect-kubectl",
+				SupportURL:          "https://github.com/open-control-plane/support/issues",
 			},
 		},
 		{
