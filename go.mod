@@ -8,7 +8,7 @@ require (
 	github.com/openmcp-project/openmcp-operator/api v1.4.1
 	github.com/openmcp-project/openmcp-operator/lib v1.4.1
 	github.com/openmcp-project/openmcp-testing v1.4.1
-	github.com/openmcp-project/project-workspace-operator/api v1.4.0
+	github.com/openmcp-project/project-workspace-operator/api/v2 v2.4.2
 	github.com/spf13/cobra v1.10.2
 	github.com/wneessen/go-mail v0.8.1
 	k8s.io/api v0.37.0
