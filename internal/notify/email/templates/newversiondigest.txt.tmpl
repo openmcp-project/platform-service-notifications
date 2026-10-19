@@ -1,0 +1,18 @@
+{{- $product := .ProductName}}{{if not $product}}{{$product = "Open Control Plane"}}{{end -}}
+A new version of {{.ServiceName}} is available
+
+Hi{{if .RecipientName}} {{.RecipientName}}{{end}},
+
+Version {{.NewVersion}} of {{.ServiceName}} is now available. The following control
+plane{{if ne (len .AffectedControlPlanes) 1}}s use{{else}} uses{{end}} this service:
+{{range .AffectedControlPlanes}}
+  - {{.Name}} (ns: {{.Namespace}}){{if .CurrentVersion}}, current: {{.CurrentVersion}}{{end}}{{if .ConsoleURL}}
+    Open in webapp: {{.ConsoleURL}}{{end}}{{end}}
+{{if .ConsoleURL}}
+Open in webapp: {{.ConsoleURL}}
+{{end}}
+--
+You received this message because of activity on the {{$product}} platform.
+To manage notifications, create a UserNotificationOptOut on your workspace.
+{{if .SupportURL}}Found a bug or have a request? {{.SupportURL}}
+{{end}}
