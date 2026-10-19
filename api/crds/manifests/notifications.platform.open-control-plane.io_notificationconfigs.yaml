@@ -44,6 +44,11 @@ spec:
           spec:
             description: spec defines the desired state of NotificationConfig
             properties:
+              connectURL:
+                description: |-
+                  ConnectURL is a link to documentation on how to connect tools such as kubectl
+                  to a control plane. Surfaced as a secondary button in membership-added emails.
+                type: string
               docsURL:
                 description: |-
                   DocsURL is a link to user-facing documentation, surfaced to new users in the
@@ -134,6 +139,11 @@ spec:
                 description: |-
                   RecordRetention is how long delivered NotificationRecords are kept before pruning.
                   Defaults to 720h (30 days).
+                type: string
+              supportURL:
+                description: |-
+                  SupportURL is a link to a support repository or issue tracker where users can
+                  report bugs, request features, or ask questions. Shown subtly in all email footers.
                 type: string
               usernameIsEmail:
                 description: |-
