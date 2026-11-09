@@ -130,10 +130,10 @@ func TestParseServiceGVK(t *testing.T) {
 		wantVer    string
 		wantErr    bool
 	}{
-		{"MyKind", "mygroup.io/v1", "mygroup.io", "v1", false},
-		{"MyKind", "v1", "", "v1", false},
-		{"MyKind", "services.example.io/v1beta1", "services.example.io", "v1beta1", false},
-		{"MyKind", "", "", "", true},
+		{"MyKind", "mygroup.io/v1", "mygroup.io", "v1", false},          //nolint:goconst
+		{"MyKind", "v1", "", "v1", false},                                //nolint:goconst
+		{"MyKind", "services.example.io/v1beta1", "services.example.io", "v1beta1", false}, //nolint:goconst
+		{"MyKind", "", "", "", true},                                     //nolint:goconst
 	}
 	for _, tc := range cases {
 		gvk, err := parseServiceGVK(tc.kind, tc.apiVersion)
