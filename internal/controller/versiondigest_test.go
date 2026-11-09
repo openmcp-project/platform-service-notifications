@@ -213,6 +213,7 @@ var svcGVK = metav1.GroupVersionKind{Group: "services.test", Version: "v1", Kind
 // testCPNS is a workspace namespace so projectWorkspaceFromNamespace resolves to a valid pair.
 const testCPNS = "project-poc--ws-dev"
 
+//nolint:unparam // name always "catalog" in current tests but the helper is deliberately general
 func reconcileDigest(t *testing.T, rec *VersionDigestReconciler, name string) {
 	t.Helper()
 	_, err := rec.Reconcile(context.Background(), reconcile.Request{
